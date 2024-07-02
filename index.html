@@ -27,7 +27,7 @@
         }
 
         .high-font-size {
-            font-size: 18px;
+            font-size: 17px;
         }
 
         .low-font-size {
@@ -46,9 +46,9 @@
 
 <body>
     <div class="container-lg mx-auto p-2">
-        <nav class="navbar navbar-expand-lg mb-2">
+        <nav class="navbar navbar-expand-lg mb-2" id="header">
             <div class="container-fluid">
-                <a class="navbar-brand text-white" href="#">Logo</a>
+                <a class="navbar-brand text-white" href="#">rubblestech</a>
                 <button class="navbar-toggler bg-light rounded-0 p-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -76,11 +76,11 @@
             </div>
         </nav> <!-- navbar section ends here-->
 
-        <div class="container back-color p-3 mb-3" style="min-height: 200px;">
+        <div class="container back-color p-3 mb-4" style="min-height: 200px;">
             <div class="row mx-auto" style="min-height: 200px;">
-                <div class="col-lg-4 p-2">
-                    <img class="img-fluid" src="../corporate.jpeg" width="50%" />
-                    <p class="high-font-size text-justify mt-2">Software Engineer</p>
+                <div class="col-lg-4 p-2 ">
+                    <img class="img-fluid" src="https://res.cloudinary.com/doqxwwvpo/image/upload/v1719868655/corporate_aguac8.jpg" width="50%" />
+                    <p class="high-font-size text-justify mt-2">Software Developer</p>
                 </div>
                 <div class="col-lg-8 p-2 mx-auto">
                     <div class="mt-3 mb-2">
@@ -93,7 +93,7 @@
             </div>
         </div> <!-- about me section ends here-->
 
-        <div class="container back-color p-3 mb-3" style="min-height: 200px;" id="skills">
+        <div class="container back-color p-3 mb-4" style="min-height: 200px;" id="skills">
             <div class="row mx-auto" style="min-height: 200px;">
                 <div class="col-lg-2">
                 </div>
@@ -112,27 +112,28 @@
             </div>
         </div> <!-- skills section ends here-->
 
-        <div class="container back-color p-3 mb-3" style="min-height: 200px;" id="projects">
-            <div class="mb-3 mt-3">
-                <h3 class="text-center text-justify">Projects</h3>
-            </div>
+        <div class="container back-color p-3 mb-4" style="min-height: 200px;" id="projects">
             <div class="row mx-auto" style="min-height: 200px;">
-                <div class="col-lg-5 p-2 rounded">
-                    <img src="../port.png" width="100%" />
-                    <p class="text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
-                        culpa, amet reprehenderit assumenda, recusandae nobis praesentium repellat veritatis dolorum
-                        incidunt quos eos id pariatur maiores consequuntur sapiente mollitia facere ea.</p>
+                <div class="col-lg-2">
                 </div>
-                <div class="col-lg-5 p-2 offset-lg-2 rounded">
-                    <img src="../port.png" width="100%" />
-                    <p class="text-justify mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur
-                        culpa, amet reprehenderit assumenda, recusandae nobis praesentium repellat veritatis dolorum
-                        incidunt quos eos id pariatur maiores consequuntur sapiente mollitia facere ea.</p>
+                <div class="col-lg-8 pt-4">
+                    <h3 class="text-center text-justify"> Projects </h3>
+                    <p class="text-center text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Deserunt esse tenetur voluptatem ut,
+                        mollitia voluptates quas ea numquam voluptate culpa vel minus adipisci asperiores in. Beatae
+                        provident blanditiis odit fugit.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Deserunt esse tenetur voluptatem ut,
+                        mollitia voluptates quas ea numquam voluptate culpa vel minus adipisci asperiores in.
+                    </p>
+                    <div class="text-center"><a href="https://github.com/presleyEOmozuwa?tab=repositories" class="text-justify fw-semibold">Github Portal</a></div>
+                    
+                </div>
+                <div class="col-lg-2">
                 </div>
             </div>
         </div> <!-- projects section ends here-->
 
-        <div class="container back-color p-3 mb-3" style="min-height: 200px;" id="contact">
+        <div class="container back-color p-3 mb-4" style="min-height: 200px;" id="contact">
             <div class="mb-3 mt-3">
                 <h3 class="text-center text-justify">Contact Me</h3>
             </div>
@@ -142,18 +143,16 @@
                     <form class="p-2">
                         <div class="form-group mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Name</label>
-                            <input type="text" class="form-control rounded-0 p-2" id="exampleFormControlInput1"
-                                placeholder="enter name">
+                            <input type="text" class="form-control rounded-0 p-2" id="exampleFormControlInput1">
                         </div>
                         <div class="form-group mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Email</label>
-                            <input type="email" class="form-control rounded-0 p-2" id="exampleFormControlInput1"
-                                placeholder="enter email">
+                            <input type="email" class="form-control rounded-0 p-2" id="exampleFormControlInput1">
                         </div>
                         <div class="form-group mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Phone</label>
                             <input type="text" class="form-control rounded-0 p-2" id="exampleFormControlInput1"
-                                placeholder="enter phone(optional)">
+                                placeholder="optional">
                         </div>
                         <div class="form-group mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Message</label>
@@ -175,13 +174,12 @@
                 </div>
                 <div class="col-lg-8">
                     <div class="text-center">
-                        <p class="text-justify">&copycopyright presleyomozuwa 2024</p>
+                        <p class="text-justify">&copycopyright rubblestech 2024</p>
                     </div>
                 </div>
                 <div class="col-lg-2">
                 </div>
             </div>
-
         </div>
     </div>
 
