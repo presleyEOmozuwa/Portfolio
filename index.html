@@ -47,11 +47,13 @@
         }
 
         .hide {
-            visibility: hidden;
+            display: none;
+            text-align: center;
         }
 
         .show {
-            visibility: visible;
+            display: block;
+            text-align: center;
         }
     </style>
 </head>
@@ -124,7 +126,7 @@
             </div>
         </div> <!-- projects section ends here-->
 
-        <div class="container back-color p-3 mb-3" style="min-height: 200px;" id="contact">
+        <div class="container back-color p-3 mb-2" style="min-height: 200px;" id="contact">
             <div class="mb-3 mt-3">
                 <h3 class="text-center text-justify">Contact Me</h3>
             </div>
@@ -156,20 +158,16 @@
                                 id="submitBtn">Submit</button>
                         </div>
                     </form>
+                    <div id="successMsg" class="m-4"></div>
+                    <div id="spin">
+                        <div class="spinner-grow" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                    </div>
                 </div>
                 <div class="col-lg-3"></div>
             </div>
         </div> <!-- contact me section ends here-->
-        
-        <!-- <div class="container hide" id="successMsg">
-            <div class="row">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-8 text-center">
-                    <h3 class="">Thanks for getting in touch, expect a response soon.</h3>
-                </div>
-                <div class="col-lg-2"></div>
-            </div>
-        </div> -->
 
         <div class="container back-color p-3" style="min-height: 20px;" >
             <div class="row mx-auto" style="min-height: 20px;">
@@ -196,7 +194,10 @@
     <script>
         const form = document.getElementById("myForm");
         const btn = document.getElementById("submitBtn");
+        const spinner = document.getElementById("spin");
+        const msg = document.getElementById("successMsg");
         btn.setAttribute("disabled", "disabled");
+        spinner.setAttribute("class", "hide");
 
         form.addEventListener('input', () => {
             if (Name.value && Email.value && Message.value) {
@@ -210,6 +211,7 @@
         form.addEventListener("submit", (e) => {
             e.preventDefault();
             btn.setAttribute("disabled", "disabled");
+            spinner.setAttribute("class", "show");
 
             const formData = new FormData(form);
             const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwI32b0pH0Mud-RM_Lrjohf1lJB5mKqRp5mQqNQgLYnYidPc4XpXt4RhQj6PBL6c3qXDQ/exec";
@@ -220,10 +222,14 @@
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
-                    alert("Thank you for getting in touch, expect a feedback soon.")
+                    msg.textContent = "Thanks for getting in touch, expect a feedback soon.";
                     form.reset();
                 })
-                .catch(error => console.error("Error:", error));
+                .catch(error => console.error("Error:", error))
+                .finally(() => {
+                    spinner.setAttribute("class", "hide");
+                });
+
         })
 
     </script>
